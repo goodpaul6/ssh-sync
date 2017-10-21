@@ -1,4 +1,4 @@
-# SSH-Sync
+# ssh-sync
 `ssh-sync` allows you to synchronize a directory over a secure shell connection. It also has functionality to allow you to run commands remotely, all without leaving the comfort of your local machine.
 
 # Installation

@@ -15,7 +15,7 @@ def main():
     parser = argparse.ArgumentParser(description="Tool for synchronizing changes between local filesystem and remote shell")
 
     parser.add_argument("-u", "--user-id", type=str, required=True, help="Your user id.")
-    parser.add_argument("-h", "--host", type=str, required=True, help="Host domain.")
+    parser.add_argument("-d", "--host-domain", type=str, required=True, help="Host domain.")
     parser.add_argument("-w", "--wait-time", type=int, default=5, help="Number of seconds between each sync.")
     parser.add_argument("-r", "--remote-dir", type=str, required=True, help="Remote path to directory to sync.")
     parser.add_argument("-c", "--copy", action="store_true", help="Copies remote directory to current directory.")

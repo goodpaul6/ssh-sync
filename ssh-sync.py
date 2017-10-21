@@ -12,9 +12,10 @@ def copy_from_remote(local_path, remote_path):
     scp.get(remote_path, local_path=local_path, preserve_times=True, recursive=True)
 
 def main():
-    parser = argparse.ArgumentParser(description="Tool for synchronizing changes between local filesystem and remote shell (specifically linux.student.cs.uwaterloo.ca)")
+    parser = argparse.ArgumentParser(description="Tool for synchronizing changes between local filesystem and remote shell")
 
-    parser.add_argument("-s", "--student-id", type=str, required=True, help="Your UWaterloo student id.")
+    parser.add_argument("-u", "--user-id", type=str, required=True, help="Your user id.")
+    parser.add_argument("-h", "--host", type=str, required=True, help="Host domain.")
     parser.add_argument("-w", "--wait-time", type=int, default=5, help="Number of seconds between each sync.")
     parser.add_argument("-r", "--remote-dir", type=str, required=True, help="Remote path to directory to sync.")
     parser.add_argument("-c", "--copy", action="store_true", help="Copies remote directory to current directory.")
@@ -28,7 +29,7 @@ def main():
 
     ssh = SSHClient()
     ssh.load_system_host_keys()
-    ssh.connect("linux.student.cs.uwaterloo.ca", username=args.student_id, password=args.password)
+    ssh.connect(args.host, username=args.user_id, password=args.password)
 
     print("Successfully connected to remote.")
 

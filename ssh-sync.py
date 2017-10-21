@@ -17,7 +17,7 @@ def main():
     parser.add_argument("-u", "--user-id", type=str, required=True, help="Your user id.")
     parser.add_argument("-r", "--remote-domain", type=str, required=True, help="Remote machine domain.")
     parser.add_argument("-w", "--wait-time", type=int, default=5, help="Number of seconds between each sync.")
-    parser.add_argument("-d", "--remote-dir", type=str, required=True, help="Remote path to directory to sync.")
+    parser.add_argument("-d", "--remote-dir", type=str, required=True, help="Remote path to directory to sync (MUST be absolute).")
     parser.add_argument("-c", "--copy", action="store_true", help="Copies remote directory to current directory.")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print verbose output.")
 

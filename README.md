@@ -13,5 +13,5 @@ You can then run the program with `python ssh-sync.py`.
 # Usage
 See `ssh-sync.py --help` for help with parameters.
 
-## Running Commands on Remote Machine
+# Running Commands Remotely
 You can run arbitrary commands on the remote machine by populating your local directory (created by `ssh-sync`) with a `.command` file. `ssh-sync` will recognize this file and will `cd` to the equivalent directory on the remote machine and execute the commands in this file line by line, piping their output to your local machine.

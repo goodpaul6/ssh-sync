@@ -118,7 +118,7 @@ def main():
                 if not path in cur_times:
                     remote_path = "{}/{}".format(remote_dir_dir, path.replace("\\", "/"))
 
-                    print("Detected file '{}' was deleted, deleting on remote machine...")
+                    print("Detected file '{}' was deleted, deleting on remote machine...".format(path))
                     _, _, stderr = ssh.exec_command("rm {}".format(remote_path))
 
                     lines = list(stderr.readlines())

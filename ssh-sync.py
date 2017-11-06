@@ -58,7 +58,7 @@ def main():
     remote_dir_dir = os.path.dirname(args.remote_dir)
     local_dir = os.path.basename(args.remote_dir)
 
-    if args.copy and args.remote:
+    if args.copy and args.transfer:
         print("ERROR: Cannot --copy and --transfer. Pick one.")
         return
     
